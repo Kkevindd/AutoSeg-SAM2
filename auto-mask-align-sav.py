@@ -478,7 +478,7 @@ if __name__ == '__main__':
     parser.add_argument("--stability_score_thresh", type=float, default=0.85)
     args = parser.parse_args()
     
-    video_name=args.video_path[40:-4]
+    video_name = args.video_path.rsplit('/', 1)[-1].split('.', 1)[0]
     
     os.makedirs(args.output_dir, exist_ok=True)
     logger.add(os.path.join(args.output_dir, 'log',video_name,f'{args.level}.log'), rotation="500 MB")

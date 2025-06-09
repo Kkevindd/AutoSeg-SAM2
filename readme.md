@@ -1,17 +1,5 @@
 # README
-This is an automatic full segmentation  tool based on [Segment-Anything-2](https://github.com/facebookresearch/segment-anything-2) and [Segment-Anything-1](https://github.com/zrporz/segment-anything-1). Our tool performs automatic full segmentation of the video, enabling the tracking of each object and the detection of possible new objects.
-
-
-## Demo
-
-https://github.com/user-attachments/assets/12fc2c3f-b915-4f58-a492-fc74bbc31e52
-
-
-https://github.com/user-attachments/assets/f080aab6-12a6-461b-8618-cc25bcf67a9b
-
-
-https://github.com/user-attachments/assets/ef45b7ee-4d89-4096-87d7-24c273f9dc6e
-
+This is an automatic full segmentation tool based on zrporz/autoseg-sam2 
 
 ## Environment Setup
 First, clone this repository and submodules

@@ -58,11 +58,20 @@ bash scripts/chickenchicken.sh
 ## model paths initialized
 Please update model paths in auto-mask-align-sav.py
 ```
-    sam2_checkpoint="/to/path/sam2_hiera_large.pt"      (line 504)
-    model_cfg="sam2_configs/sam2_hiera_l.yaml"                (line 505)
-    sam_ckpt_path="/to/path/sam_vit_h_4b8939.pth"       (line 511)
+sam2_checkpoint="/to/path/sam2_hiera_large.pt"      (line 504)
+model_cfg="sam2_configs/sam2_hiera_l.yaml"          (line 505)
+sam_ckpt_path="/to/path/sam_vit_h_4b8939.pth"       (line 511)
     
 ```
+
+## run segment video and generate json file used rle encode
+```
+chmod +x auto-mask-sav.sh
+./auto-mask-sav.sh
+```
+## attention
+if video_name(from auto-mask-align-sav.py line 481) appear error, please modify regular expression in line 481
+
 ## Citation
 ```bibtex
 @software{AutoSeg_SAM2,

@@ -5,12 +5,12 @@ gpu_count=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)
 echo "Detected $gpu_count GPU(s)."
 
 # 输入文件路径
-video_list="/mnt/juicefs/datasets/re10k/paths/1.txt"
+video_list="/mnt/juicefs/datasets/re10k/paths/paths.txt"
 
 # 设置日志文件路径（用户指定目录）
 log_dir="/mnt/juicefs/datasets/re10k/semantic"
 mkdir -p "$log_dir"  # 确保目录存在
-LOG_FILE="${log_dir}/processing1.log"
+LOG_FILE="${log_dir}/processing.log"
 echo "Log file will be saved to: $LOG_FILE"
 
 # 读取文件列表到数组

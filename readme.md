@@ -55,7 +55,14 @@ or you can use our demo datasets [chickenchicken](https://drive.google.com/file/
 ```bash
 bash scripts/chickenchicken.sh
 ```
-
+## model paths initialized
+Please update model paths in auto-mask-align-sav.py
+```
+    sam2_checkpoint="/to/path/sam2_hiera_large.pt"      (line 504)
+    model_cfg="sam2_configs/sam2_hiera_l.yaml"                (line 505)
+    sam_ckpt_path="/to/path/sam_vit_h_4b8939.pth"       (line 511)
+    
+```
 ## Citation
 ```bibtex
 @software{AutoSeg_SAM2,

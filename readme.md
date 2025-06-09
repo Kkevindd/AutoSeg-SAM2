@@ -36,25 +36,35 @@ sam2_checkpoint="/to/path/sam2_hiera_large.pt"      (line 504)
 model_cfg="sam2_configs/sam2_hiera_l.yaml"          (line 505)
 sam_ckpt_path="/to/path/sam_vit_h_4b8939.pth"       (line 511)
 ```
+## Data setting
+Please create paths.txt,write rgb video paths line by line，like
+```
+/to/path/123.mp4
+/to/path/125.mp4
+/to/path/128.mp4
+```
+Please create semantic directory,and create related subfolders
+```
+cd "/to/path"
+mkdir output
+cd output
+mkdir semantic && mkdir json && mkdir temp && mkdir log
 
+```
+Open auto-mask-sav.sh,setting video_list,log_dir
+```
+video_list="/to/path/paths.txt"   (line 8)
+log_dir="to/path/output"          (line 11)
+```
 ## Run segment video and generate json file used rle encode
 ```
 chmod +x auto-mask-sav.sh
 ./auto-mask-sav.sh
 ```
+
+## Output
+look output folder
+
 ## Attention
 if video_name(from auto-mask-align-sav.py line 481) appear error, please modify regular expression in line 481
 
-## Citation
-```bibtex
-@software{AutoSeg_SAM2,
-  author = {Zrporz},
-  title = {AutoSeg-SAM2},
-  year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/zrporz/AutoSeg-SAM2},
-  version = {Latest}, 
-  license = {MIT}, 
-  note = {Automated image segmentation tool based on Segment Anything Model (SAM)}
-}
-```
